@@ -7,3 +7,4 @@ latest version of the file!
 * git difF: It’s  important  to  note  that  git  diff  by  itself  doesn’t  show  all  changes  made  since  your  last
 commit — only  changes  that  are  still  unstaged.  If  you’ve  staged  all  of  your  changes,  git diff  will
 give you no output.
+newline\n
