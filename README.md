@@ -20,22 +20,25 @@
 
     // find commits which are not merges from specific author done in specific month under the tests subfolder.
 
-### git commit --amend
+### git commit 
+    --amend:
      - The  obvious  value  to  amending  commits  is  to  make  minor  improvements  to  your last  commit,  without  cluttering  your  repository  history  with  commit  messages  of the form, “Oops, forgot to add a file” or “Darn, fixing a typo in last commit”.
 
-### git reset HEAD some_file.txt:
+### git reset 
+    - git reset HEAD some_file.txt:
      - unstage staged file
      - new cmd from git 2.23 is: git restore
-### git restore --staged STAGED_FILE.txt
+### git restore
+    - git restore --staged STAGED_FILE.txt
      - remove the staged file from stage
 
-* git restore MODIFIED_FILE.txt
-     - unmodify the modified file
-* git checkout -- MODIFIED_FILE.txt
-     - discard/undo the changes that you made to the file // go back with the code.
+    - git restore MODIFIED_FILE.txt
+        - unmodify the modified file
+    -git checkout -- MODIFIED_FILE.txt
+        - discard/undo the changes that you made to the file // go back with the code.
      ---------- DANGEROUS! You stashing instead!
 
-* remotes
+### git remotes
      - git remote // to show what pointers you have // origin
      - git remote -v // to show full paths https
      - git remote add acronym https://....
