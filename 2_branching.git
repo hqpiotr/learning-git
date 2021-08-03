@@ -24,6 +24,7 @@ IMPORTANT: cherry pick!
     - in order to get only one file updates from the other branch...
     - git checkout the_other_branch the_path_to_file_i_want
     - then later commit it and viola!
+<<<<<<< HEAD
 
 delete
     - git branch -d hotfix
@@ -45,3 +46,5 @@ merge conflicts
 
     - graphical: git mergetool
 
+=======
+>>>>>>> 763b589f365987e105ded68f809c07e6cfe52232
