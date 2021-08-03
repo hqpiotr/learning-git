@@ -34,3 +34,11 @@
      - discard/undo the changes that you made to the file // go back with the code.
      ---------- DANGEROUS! You stashing instead!
 
+* remotes
+     - git remote // to show what pointers you have // origin
+     - git remote -v // to show full paths https
+     - git remote add acronym https://....
+     - git fetch <origin>
+     - git remote show origin // shows https.
+     - 
+
