@@ -59,4 +59,5 @@ Latest page read:
 ### git aliases
     - git config --global alias.co checkout
         // alias.__NAZWA polecenie
-
+    - git config --global alias.ustage 'reset HEAD --'
+    - git config --global alias.last 'log -1 HEAD'
