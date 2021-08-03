@@ -48,4 +48,6 @@ merge conflicts
 check latest commit on each branch:
     - git branch -v
     
-###
+delete branch:
+    - git branch -d localBranchName
+    - git push origin --delete remoteBranchName
