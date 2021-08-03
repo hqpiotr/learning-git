@@ -10,6 +10,7 @@ git branch
 swithcing branches
     - git checkout new_branch
         // this moves the HEAD pointer from master to new_branch
+    - git switch does the same
 
 git log
     - this shows only log from the current branch you're on!
@@ -17,3 +18,7 @@ git log
 
 create and switch to new branch
     - git checkout -b branchname
+
+IMPORTANT: cherry pick!
+    - in order to get only one file updates from the other branch...
+    - git checkout the_other_branch the_path_to_file_i_want
