@@ -14,4 +14,6 @@ swithcing branches
 git log
     - this shows only log from the current branch you're on!
     - git log --oneline --decorate --graph --all
-    
+
+create and switch to new branch
+    - git checkout -b branchname
