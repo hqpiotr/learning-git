@@ -24,3 +24,24 @@ IMPORTANT: cherry pick!
     - in order to get only one file updates from the other branch...
     - git checkout the_other_branch the_path_to_file_i_want
     - then later commit it and viola!
+
+delete
+    - git branch -d hotfix
+
+synchroniznig branches  
+    - if master is different than your current branch, you can:
+    1. merge master in your branch // download latest changes
+    2. or pull in hotfix branch to your master later.
+    master: merge hotfix
+    branch -d hotfix
+
+merge conflicts
+    - if conflict, merge is abandoned. fix conflict
+    - first file from working branch, <<<<<<<<<<
+    - delimeter: =========
+    - other branch >>>>>>>>>>>
+    - after fixed, put git add! STARGING MARKS CONFLICT RESOLVED.
+    - then git commit to complete
+
+    - graphical: git mergetool
+
