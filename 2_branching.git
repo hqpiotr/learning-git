@@ -10,3 +10,7 @@ git branch
 swithcing branches
     - git checkout new_branch
         // this moves the HEAD pointer from master to new_branch
+
+git log
+    - this shows only log from the current branch you're on!
+    
