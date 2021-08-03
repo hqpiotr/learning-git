@@ -40,11 +40,10 @@ Latest page read:
 ### git restore
     - git restore --staged STAGED_FILE.txt
         // remove the staged file from stage
-
     - git restore MODIFIED_FILE.txt
         // unmodify the modified file
-    -git checkout -- MODIFIED_FILE.txt
-        // discard/undo the changes that you made to the file
+    - git checkout -- MODIFIED_FILE.txt
+        // discard/undo the changres that you made to the file
         // go back with the code. !!! DANGEROUS! You stashing instead!
 
 ### git remotes
@@ -56,5 +55,8 @@ Latest page read:
      - git fetch <origin>
      - git remote show origin 
         // shows https address.
-     - 
+
+### git aliases
+    - git config --global alias.co checkout
+        // alias.__NAZWA polecenie
 
