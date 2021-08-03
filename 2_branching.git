@@ -1,1 +1,12 @@
 ** Here we focus on 2nd chapter of the Pro Git Book -- branching
+
+git branch
+    - git branch fixing_bug
+        // only creates the branch, does not switch to it
+    - creating branch basically creates a pointer which points
+      to certain place.
+    - every branch has the HEAD pointer.
+
+swithcing branches
+    - git checkout new_branch
+        // this moves the HEAD pointer from master to new_branch
