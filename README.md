@@ -1,6 +1,6 @@
 # new change from some_branch on README
 # learning-git based on Pro Git book!
-Latest page read: 
+Latest page read: https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging
 
 ### git add: 
     - treat as "add precisely to the commit next time",

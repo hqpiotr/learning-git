@@ -18,6 +18,7 @@ git log
 
 create and switch to new branch
     - git checkout -b branchname
+    - git switch -c branchname // equal to above
 
 IMPORTANT: cherry pick!
     - in order to get only one file updates from the other branch...
