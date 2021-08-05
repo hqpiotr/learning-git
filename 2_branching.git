@@ -110,6 +110,22 @@ A)
     git push origin --delete REMOTE_NEW
 
 
+B)
+1. create local branch repo
+2. create remote branch repo with different name 
+3. connect these and push changes // ?!
+4. check to which remote branch your local is connected to.
+5. remove local
+6. remove remote
+
+git checkout -b B
+git push origin B:REMOTE_B // full branch
+git branch --set-upstream-to origin/REMOTE_B
+git branch -vv
+git branch -d B
+git push origin --delete REMOTE_B
+
+
 
     
 B) 
