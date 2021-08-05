@@ -51,3 +51,20 @@ check latest commit on each branch:
 delete branch:
     - git branch -d localBranchName
     - git push origin --delete remoteBranchName
+
+check which branches were merged already to master
+    - git branch --merged // if merged, perhaps not needed anymore
+    - git branch --unmerged // similar
+    
+rename
+    - git branch --move old_branch_name new_fancy_branch
+    - git push --set-upstream origin new_fancy_branch
+
+
+remote branches!
+    - git add remote another_www_source git.www.https.online.com
+
+git fetch origin
+    - this checks and puts the pointer to the latest from remote master
+    - and syncronize your work with remote, moving origin/master pointer to new
+ 
