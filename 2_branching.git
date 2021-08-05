@@ -91,25 +91,6 @@ tracking branches
         // this shows the upstream to remote branch
         // shortcut from --set-upstream-to
 
-
-A)
-1. create local branch repo
-    git checkout -b NEW
-2. create remote branch repo with different name 
-    git remote add REMOTE_NEW_BRANCH // ?!
-    git push -u origin NEW:REMOTE_NEW
-3. connect these and push changes // ?!
-    git branch -u origin/REMOTE_NEW // or --set-upstream origin/REMOTE_NEW // doesn't work
-    git push origin NEW:REMOTE_NEW
-4. check to which remote branch your local is connected to.
-    git branch -vv // show
-5. remove local
-    git checkout master
-    git branch -d NEW
-6. remove remote
-    git push origin --delete REMOTE_NEW
-
-
 B)
 1. create local branch repo
 2. create remote branch repo with different name 
