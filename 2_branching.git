@@ -58,13 +58,59 @@ check which branches were merged already to master
     
 rename
     - git branch --move old_branch_name new_fancy_branch
-    - git push --set-upstream origin new_fancy_branch
+
+create remote branch
+    - git push origin localBranchName:RemoteBranchName
+    - git push --set-upstream origin new_fancy_branch //???
 
 
-remote branches!
+remote branches = adding repository
     - git add remote another_www_source git.www.https.online.com
 
 git fetch origin
     - this checks and puts the pointer to the latest from remote master
     - and syncronize your work with remote, moving origin/master pointer to new
- 
+
+FETCH idea !
+    - It’s important to note that when you do a fetch that brings down
+      new remote-tracking branches, you don’t automatically have local, 
+      editable copies of them. In other words, in this case, you don’t 
+      have a new serverfix branch — you have only an origin/serverfix 
+      pointer that you can’t modify.
+
+    - To merge this work to current working branch, run git merge origin/serverfix. 
+
+create a new local branch and fetch from some online repo:
+    - git checkout -b ProntoFix origin/remoteBranchNo2
+
+tracking branches
+    - git checkout -b mb origin/mainbranch
+        // create mb locally and connect to mainbranch on remote
+    - git branch -u origin/serverfix   
+        // if i already have some cloned repo or my code, use this to connect
+        // this shows the upstream to remote branch
+        // shortcut from --set-upstream-to
+
+
+A)
+1. create local branch repo
+    git checkout -b NEW
+2. create remote branch repo with different name 
+    git remote add REMOTE_NEW_BRANCH // ?!
+    git push -u origin NEW:REMOTE_NEW
+3. connect these and push changes // ?!
+    git branch -u origin/REMOTE_NEW // or --set-upstream origin/REMOTE_NEW // doesn't work
+    git push origin NEW:REMOTE_NEW
+4. check to which remote branch your local is connected to.
+    git branch -vv // show
+5. remove local
+    git checkout master
+    git branch -d NEW
+6. remove remote
+    git push origin --delete REMOTE_NEW
+
+
+
+    
+B) 
+create local branch repo and already connect it with remote exisiting
