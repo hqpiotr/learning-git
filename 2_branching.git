@@ -125,8 +125,9 @@ git branch -vv
 git branch -d B
 git push origin --delete REMOTE_B
 
+track some other remote branch
+    - git checkout -b new_local_branch
+    - git branch -u origin/master // track master from new_local.
 
-
+!!! -u is shortcut to --set-upstream-to
     
-B) 
-create local branch repo and already connect it with remote exisiting
