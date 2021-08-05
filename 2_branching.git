@@ -111,4 +111,19 @@ track some other remote branch
     - git branch -u origin/master // track master from new_local.
 
 !!! -u is shortcut to --set-upstream-to
-    
+
+
+create new branch locally and track remote one:
+    - git checkout -b sf origin/smallfix
+
+if you already have local branch and connect it:
+    - git branch -u origin/smallfix
+
+if adding new remote for traking:
+    - git remote add teamone git.abc.com
+
+git fetch vs git pull:
+    - While the git fetch command will fetch all the changes on the
+     server that you don’t have yet, it will not modify your working
+     directory at all. It will simply get the data for you and
+     let you merge it yourself. 
