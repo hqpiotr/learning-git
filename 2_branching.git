@@ -119,11 +119,15 @@ create new branch locally and track remote one:
 if you already have local branch and connect it:
     - git branch -u origin/smallfix
 
-if adding new remote for traking:
+if adding new remote for tracking:
     - git remote add teamone git.abc.com
+
+git clone and git checkout implicitly create the upstream for you!
 
 git fetch vs git pull:
     - While the git fetch command will fetch all the changes on the
      server that you don’t have yet, it will not modify your working
      directory at all. It will simply get the data for you and
      let you merge it yourself. 
+
+     - git pull: is a git fetch followed by git merge!
