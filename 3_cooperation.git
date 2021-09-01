@@ -1,2 +1,26 @@
 git diff --check: to show whitespaces at the end of the lines
 git diff --check: to show whitespaces at the end of the lines
+
+John doing commits
+Jessica doing commits
+- their local masters are different.
+
+John push origin master gets an error.
+That's why John needs to fetch origin and merge his changes with Jessica's.
+Then only to push.
+
+Jessica wants to push issue54 branch, so she:
+git log --no-merges issue54..origin/master
+- display only commits that are on the latter branch (master) but are not in first branch
+
+git checkout master
+git merge issue54
+git merge origin/master
+git push origin master
+
+start a new branch based on master
+git fetch origin
+git checkout -b featureB origin/master
+vim work
+
+git push -u origin featureB:SERVER_FEATURE_C
