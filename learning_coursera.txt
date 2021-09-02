@@ -1,0 +1,12 @@
+sed - Stream EDitor
+    substitute/find replace:
+    sed 's/unix/linux/' textfile.txt
+    // this only shows how it would look like, if you wanna edit, do:
+    sed -i 's/unix/linux/g' textfile.txt
+
+tags:
+    git tag v0.1 HEAD~1
+    git tag -a -m "This is an annotated tag created and stamped by Integration Manager as official version" v1.0 HEAD
+    // to save tags you need to push them to repository
+    git push origin v1.0 // one
+    git push origin --tags // all
