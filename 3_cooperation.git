@@ -24,3 +24,40 @@ git checkout -b featureB origin/master
 vim work
 
 git push -u origin featureB:SERVER_FEATURE_C
+
+
+
+
+
+The git request-pull command takes the base branch into which you want
+ your topic branch pulled and the Git repository URL you want them to
+  pull from, and produces a summary of all the changes you’re asking 
+  to be pulled. For instance, if Jessica wants to send John a pull 
+  request, and she’s done two commits on the topic branch she just 
+  pushed, she can run this:
+
+            $ git request-pull origin/master myfork
+            The following changes since commit 1edee6b1d61823a2de3b09c160d7080b8d1b3a40:
+            Jessica Smith (1):
+                Create new function
+
+            are available in the git repository at:
+
+        git://githost/simplegit.git featureA
+
+            Jessica Smith (2):
+            Add limit to log function
+            Increase log output to 30 from 25
+
+            lib/simplegit.rb |   10 +++++++++-
+            1 files changed, 9 insertions(+), 1 deletions(-)
+
+Example: put sth to my fork, then request to add it to master.
+    $ git checkout -b featureB origin/master
+    ... work ...
+    $ git commit
+    $ git push myfork featureB
+    $ git request-pull origin/master myfork
+    ... email generated request pull to maintainer ...
+    $ git fetch origin
+
