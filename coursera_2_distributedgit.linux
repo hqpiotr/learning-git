@@ -48,4 +48,34 @@ reverting and resetting commits
     source files are NOT changed!
     discard uncommitted changes!
 
+check disk usage + garbage collection
+    du -shc .git
+    // compress it
+    git gc
+    // check again if shrinked
+    du -shc .git
+    
+git blame <file>
+    shows commit changes and author
+
+
+git bisect
+    locate a bug using divide and conquer (if 1024 commits, in 10 attemps you will find a problem)
+    bisect and decide if tests pass or not (bisect good / bisect bad)
+    example:
+        $ git bisect start
+        $ git bisect bad
+        $ git bisect good v2.6.30
+        Bisecting: 16539 revisions left to test after this
+        [b4f3fda5d475931d596d5cf599a193f42b857594] Staging: hv: coding style cleanup of
+        $ git bisect bad
+        $ git bisect good
+        $ git bisect good
+ 
+        $ git bisect reset   
+
+git log -p
+    check also what the changes are!
+
 // version 5
+// version 7
