@@ -43,6 +43,7 @@ reverting and resetting commits
 
     git reset
     nie zmieniaj plikow jako takich, ale wroc z historia i HEADem do konkretnej rewizji
+    git reset --hard ! // zmien rowniez pliki!
     does the same, but should be limited to you only working on branch? // TBC
     source files are NOT changed!
     discard uncommitted changes!
