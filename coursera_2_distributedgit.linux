@@ -21,7 +21,6 @@ Exercise
 
 
 git ls-files
-<<<<<<< HEAD
     list the files which are staged/tracked by git.
 
 
@@ -42,10 +41,11 @@ reverting and resetting commits
     source files are changed!
     reverts and puts a new commit on top (updates the HEAD pointer to new one)
 
-    git reset 
+    git reset e0a4e779de3337e9f3c282fb6f847cce21b4ce6d
+    nie zmienia pliku jako tako, ale wraca z komitami do punktu wczesniej z rewizji e0a4e779de3337e9f3c282fb6f847cce21b4ce6d
     does the same, but should be limited to you only working on branch? // TBC
     source files are NOT changed!
     discard uncommitted changes!
-=======
-    list the files which are staged/tracked by git.
->>>>>>> parent of 51dde3d (updates)
+
+// new version
+// even newer version after RESET (changes were not dropped, but the commit was from repo!)
