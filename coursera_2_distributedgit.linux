@@ -22,3 +22,15 @@ Exercise
 
 git ls-files
     list the files which are staged/tracked by git.
+
+
+grepping commits
+    $ git log | grep "^commit" | head -10
+    commit 56b24d1bbcff213dc9e1625eea5b8e13bb50feb8
+    commit 5a45a5a881aeb82ce31dd1886afe04146965df23
+
+revert to specific commit  
+    git checkout 5a45a5a881aeb82ce31dd1886afe04146965df23
+    or
+    git tag v.10 5a45a5a881aeb82ce31dd1886afe04146965df23
+    git checkout v.10
