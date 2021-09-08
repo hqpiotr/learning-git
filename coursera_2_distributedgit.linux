@@ -34,3 +34,14 @@ revert to specific commit
     or
     git tag v.10 5a45a5a881aeb82ce31dd1886afe04146965df23
     git checkout v.10
+
+reverting and resetting commits
+    git commit test1 // 8di8i9
+    git revert 8di8i9 | HEAD | SHA-1 | tag
+    source files are changed!
+    reverts and puts a new commit on top (updates the HEAD pointer to new one)
+
+    git reset 
+    does the same, but should be limited to you only working on branch? // TBC
+    source files are NOT changed!
+    discard uncommitted changes!
