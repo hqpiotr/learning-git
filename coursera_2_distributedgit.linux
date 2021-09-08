@@ -21,6 +21,7 @@ Exercise
 
 
 git ls-files
+<<<<<<< HEAD
     list the files which are staged/tracked by git.
 
 
@@ -45,3 +46,6 @@ reverting and resetting commits
     does the same, but should be limited to you only working on branch? // TBC
     source files are NOT changed!
     discard uncommitted changes!
+=======
+    list the files which are staged/tracked by git.
+>>>>>>> parent of 51dde3d (updates)
