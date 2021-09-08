@@ -10,3 +10,186 @@ tags:
     // to save tags you need to push them to repository
     git push origin v1.0 // one
     git push origin --tags // all
+
+merge
+    by default if no changes on master there is attempt to do FAST FORWARD MERGE 
+    // requires linear history team policy
+    
+    alternative: --no-ff // use non fast FORWARD
+    the difference is that the history is shown that new version M is done from two branches, not as continuation
+    git merge --no-ff featureX
+    // requires merge commits visible team policy
+    
+    rebase on the other hand makes no history about branching as well? // TBC
+
+
+Change the branch to which you mainly wanna commit or which you want to track mainly
+Let's assume that it is development branch, instead of stable
+
+        git branch --all
+        * stable
+        development
+        remotes/origin/HEAD -> origin/stable
+        remoted/origin/stable
+        remoted/origin/development
+
+        git remote set-head origin development
+
+        git branch --all
+        stable
+        * development
+        remotes/origin/HEAD -> origin/development
+        remoted/origin/development
+        remoted/origin/stable
+
+
+git pull // combines fetch & merge
+        --ff (default)
+        --no-ff (always include merge commit)
+        --ff-only (try fast forwad, if imposible - cancel)
+
+rebase
+git rebase master featureX
+- meaning checkout featureX and change it's parent to a master
+- rebase is a merge option
+rebase with a merge conflict:
+    git checkout featureX
+    git rebase master
+        conflict!
+        // fix conflict
+    git add file.txt
+    git rebase --continue
+
+
+rewriting history:
+    amend
+        a.- change the commit message with same file changed
+            git commit -m "ad new comment"
+            sha a01b02c03
+            git commit --amend -m "add new comment // fixed comment now" --> new SHA-1
+            sha z03f04g11
+        b. or change the file content with same commit message
+            add still something to the file as edit, after committing...
+            git commit --amend --no-edit
+            updated file with previous commit message is there
+            new SHA-1
+
+
+git squash
+- applies a newer (squashed) commit to and older commit
+- combines the commit messages
+- removes the newer commit
+
+git log
+v3 file3
+v2 file2
+v1 file1
+git rebase -i v1
+squash
+edit the commit msg
+
+squash vs delete:
+- squash: combine commits creating one, work from both is included
+- delete: no changes from commit are applied. - Diff is thrown away. -Work from commit is lost.
+
+squash merge:
+- reduces the history of the commits to single commit if needed between branches
+- simplifies things between two branches, but also cleans the history. 
+- branch and commits from branch are deleted, but the work is transferred to master as new rev
+- but w/o history
+            git checkout master
+            git merge --squash featureX
+                // this only puts merged files to staging
+            git commit
+            git branch -D featureX
+
+
+very important!
+merge commit // merge-commit! 
+create additional commit with message after merging branch // to show what and from where changed
+     git merge --no-ff -m <message> <source-branch> 
+     to merge a branch into the current branch, creating a merge commit with the specified <message>.
+
+rebase
+    - it's a type of merge with rewriting history
+
+        // rebase the feature branch onto main
+        git checkout feature
+        git rebase main
+        git rebase feature main
+
+        //wrong
+        think about what would happen if you 
+        rebased main onto your feature branch:
+
+        git checkout master
+        git rebase feature
+        git rebase master feature
+
+                        prior rebase
+                        *   db396f7 (develop) Merge branch 'release1' into develop
+                        |\
+                        | | *   0fce2ab (tag: v1.00, master) Merge branch 'release1'
+                        | | |\
+                        | | |/
+                        | |/|
+                        | * | 1d0dc6a (release1) fix feature 1 bug x
+                        |/ /
+                        | | * 11c0311 (HEAD -> feature2) feature 2 wip
+                        | |/
+                        |/|
+                        * |   7716c1d Merge branch 'feature1' into develop
+                        |\ \
+                        | * | 388d81b add feature 1
+                        | * | 81a0249 feature 1 wip
+                        |/ /
+                        * / 557c9ed add fileA.txt
+                        |/
+                        * 82a2872 add README.md
+
+
+                        shit, need to align to changes from master w/ fix 
+                        rebase is needed to get the latest changes
+                        it's a form of merge... so
+                        -->
+                        git checkout feature2
+                        git rebase dvelop
+                        // conflict, resolve
+                        vim
+                        git add conflicted files...
+                        git rebase --continue
+
+
+                        after rebase
+                        * c913dec (HEAD -> feature2) feature 2 wip
+                        *   db396f7 (develop) Merge branch 'release1' into develop
+                        |\
+                        | | *   0fce2ab (tag: v1.00, master) Merge branch 'release1'
+                        | | |\
+                        | | |/
+                        | |/|
+                        | * | 1d0dc6a (release1) fix feature 1 bug x
+                        |/ /
+                        * |   7716c1d Merge branch 'feature1' into develop
+                        |\ \
+                        | * | 388d81b add feature 1
+                        | * | 81a0249 feature 1 wip
+                        |/ /
+                        * / 557c9ed add fileA.txt
+                        |/
+                        * 82a2872 add README.md
+
+                        Rebase is the form of the merge that Git performs after the 
+                        work has been done on the master of the file of the work that you've done
+                        on
+
+
+merge in one command:
+        // incorporate changes from master to feature
+        git checkout feature
+        git merge master
+        //or
+        git merge feature master
+        // so the sequence is: first branch to work on, later the work as in checkout
+        // this creates the merge commit that ties together branches
+
