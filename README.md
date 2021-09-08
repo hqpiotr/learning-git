@@ -1,6 +1,11 @@
-# new change from some_branch on README
+# HOWTO
+1. ProGit book learning or notes are prefixed with "book_"
+2. coursera learnings are prefixed with "coursera_"
+3. code files for changes are prefixed with "_"
+
+###
+
 # learning-git based on Pro Git book!
-Latest page read: https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging
 
 ### git add: 
     - treat as "add precisely to the commit next time",
