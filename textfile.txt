@@ -1,6 +1,0 @@
-unix
-system
-operating
-write some programs  on unix
-and learn how to substitute the. unix. with unix using sed
-
