@@ -1,0 +1,20 @@
+git rm differs from linux mv. git rm one removes file from working tree and the repository.
+
+git mv
+    renaming the file, equivalent of rm old and add new.
+    $ git mv oldfile newfile
+    $ mv oldfile newfile ; git rm oldfile ; git add newfile // equal
+
+ignoring
+    globally -> added files e.g. *.object as .gitignore. 
+    locally -> inside .git folders, not sure which.
+
+Exercise
+
+    First, initialize the repository, configuring it with name and email, etc. Then, add a couple of files to the project and commit them.
+    Remove one of the files with git rm and with git diff see the difference with the repository.
+    Rename the remaining file with git mv and with git diff see the difference with the repository, once again.
+    Commit again and look at the history with git log. Then, do git ls-files without any arguments.
+    Add two new files, make one of them ignored by git and modify the original remaining file. Do git ls-files again.
+    Now, try some different options to git ls-files, such as -t and -o. Do man git ls-files to see the various options available and try some others.
+    Now, add the new files that are not ignored with git add, commit once again, and do git ls-files with some options to see the results. You may want to do git log again as well.
