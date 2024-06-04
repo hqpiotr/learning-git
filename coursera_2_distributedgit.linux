@@ -81,6 +81,17 @@ git log -p
 to examine an earlier version of a file in commit 3888bc981a, do:
     git show 3888bc981a:kernel/sys.c
 
+git diff
+    show the differences between HEAD and previous version
+    git diff HASH show the diff between HEAD and HASH
+    git diff --staged // diff between staged changes and committed
+    git diff REV1 REV2
+
+    show the changes summary between the branches, based on file summary
+    git diff --stat branch master
+
+git merge
+    if mess, get back with: git reset --hard master
 
 
 
