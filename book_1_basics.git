@@ -5,6 +5,7 @@ Working Tree.
 Staging Area.
 Git Repository.
 
+
 git add: 
     - treat as "add precisely to the commit next time",
     - not the "add new files only"
